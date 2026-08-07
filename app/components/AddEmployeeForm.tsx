@@ -28,7 +28,7 @@ interface AddEmployeeFormProps {
 // ─── Shared input className helper ────────────────────────────────────────────
 
 const inputClass =
-  "w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm " +
+  "w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 bg-white " +
   "focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all";
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -73,7 +73,7 @@ const AddEmployeeForm = ({ onSuccess }: AddEmployeeFormProps) => {
 
       {/* Error banner */}
       {error && (
-        <div className="bg-red-50 border border-red-200 text-red-700 rounded-lg px-4 py-3 mb-5 text-sm">
+        <div className="bg-red-50 border border-red-200 text-red-700 rounded-lg px-4 py-3 mb-5 text-sm text-gray-900 bg-white">
           {error}
         </div>
       )}
@@ -82,7 +82,7 @@ const AddEmployeeForm = ({ onSuccess }: AddEmployeeFormProps) => {
 
         {/* First name */}
         <div>
-          <label htmlFor="add-firstName" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="add-firstName" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">
             First Name <span className="text-red-500">*</span>
           </label>
           <input id="add-firstName" name="firstName" type="text" required
@@ -92,7 +92,7 @@ const AddEmployeeForm = ({ onSuccess }: AddEmployeeFormProps) => {
 
         {/* Last name */}
         <div>
-          <label htmlFor="add-lastName" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="add-lastName" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">
             Last Name <span className="text-red-500">*</span>
           </label>
           <input id="add-lastName" name="lastName" type="text" required
@@ -102,7 +102,7 @@ const AddEmployeeForm = ({ onSuccess }: AddEmployeeFormProps) => {
 
         {/* Email */}
         <div>
-          <label htmlFor="add-email" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="add-email" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">
             Email <span className="text-red-500">*</span>
           </label>
           <input id="add-email" name="email" type="email" required
@@ -112,7 +112,7 @@ const AddEmployeeForm = ({ onSuccess }: AddEmployeeFormProps) => {
 
         {/* Department */}
         <div>
-          <label htmlFor="add-department" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="add-department" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">
             Department <span className="text-red-500">*</span>
           </label>
           <select id="add-department" name="department" required
@@ -127,7 +127,7 @@ const AddEmployeeForm = ({ onSuccess }: AddEmployeeFormProps) => {
 
         {/* Job title */}
         <div>
-          <label htmlFor="add-jobTitle" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="add-jobTitle" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">
             Job Title <span className="text-red-500">*</span>
           </label>
           <input id="add-jobTitle" name="jobTitle" type="text" required
@@ -137,7 +137,7 @@ const AddEmployeeForm = ({ onSuccess }: AddEmployeeFormProps) => {
 
         {/* Salary */}
         <div>
-          <label htmlFor="add-salary" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="add-salary" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">
             Salary (CAD/yr) <span className="text-red-500">*</span>
           </label>
           <input id="add-salary" name="salary" type="number" min="0" required
@@ -147,7 +147,7 @@ const AddEmployeeForm = ({ onSuccess }: AddEmployeeFormProps) => {
 
         {/* Start date */}
         <div>
-          <label htmlFor="add-startDate" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="add-startDate" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">
             Start Date <span className="text-red-500">*</span>
           </label>
           <input id="add-startDate" name="startDate" type="date" required
@@ -157,7 +157,7 @@ const AddEmployeeForm = ({ onSuccess }: AddEmployeeFormProps) => {
 
         {/* Status */}
         <div>
-          <label htmlFor="add-status" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="add-status" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">
             Status
           </label>
           <select id="add-status" name="status"

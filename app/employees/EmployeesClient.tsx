@@ -80,13 +80,13 @@ const EmployeesClient = ({ isAdmin }: EmployeesClientProps) => {
           placeholder="Search by name…"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="flex-1 border border-gray-300 rounded-lg px-4 py-2.5 text-sm
+          className="flex-1 border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 bg-white
                      focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
         />
         <select
           value={filterDept}
           onChange={(e) => setFilterDept(e.target.value)}
-          className="border border-gray-300 rounded-lg px-4 py-2.5 text-sm
+          className="border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 bg-white
                      focus:outline-none focus:border-blue-500 transition-all"
         >
           <option value="">All departments</option>

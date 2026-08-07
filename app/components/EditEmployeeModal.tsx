@@ -30,7 +30,7 @@ interface EditEmployeeModalProps {
 // ─── Shared input className helper ────────────────────────────────────────────
 
 const inputClass =
-  "w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm " +
+  "w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 bg-white " +
   "focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all";
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -114,7 +114,7 @@ const EditEmployeeModal = ({ employee, onClose, onSuccess }: EditEmployeeModalPr
 
         {/* Error banner */}
         {error && (
-          <div className="bg-red-50 border border-red-200 text-red-700 rounded-lg px-4 py-3 mb-5 text-sm">
+          <div className="bg-red-50 border border-red-200 text-red-700 rounded-lg px-4 py-3 mb-5 text-sm text-gray-900 bg-white">
             {error}
           </div>
         )}
@@ -122,25 +122,25 @@ const EditEmployeeModal = ({ employee, onClose, onSuccess }: EditEmployeeModalPr
         <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4" noValidate>
 
           <div>
-            <label htmlFor="edit-firstName" className="block text-sm font-medium text-gray-700 mb-1.5">First Name</label>
+            <label htmlFor="edit-firstName" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">First Name</label>
             <input id="edit-firstName" name="firstName" type="text" required
               value={formData.firstName} onChange={handleChange} className={inputClass} />
           </div>
 
           <div>
-            <label htmlFor="edit-lastName" className="block text-sm font-medium text-gray-700 mb-1.5">Last Name</label>
+            <label htmlFor="edit-lastName" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">Last Name</label>
             <input id="edit-lastName" name="lastName" type="text" required
               value={formData.lastName} onChange={handleChange} className={inputClass} />
           </div>
 
           <div>
-            <label htmlFor="edit-email" className="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
+            <label htmlFor="edit-email" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">Email</label>
             <input id="edit-email" name="email" type="email" required
               value={formData.email} onChange={handleChange} className={inputClass} />
           </div>
 
           <div>
-            <label htmlFor="edit-department" className="block text-sm font-medium text-gray-700 mb-1.5">Department</label>
+            <label htmlFor="edit-department" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">Department</label>
             <select id="edit-department" name="department" required
               value={formData.department} onChange={handleChange} className={inputClass}>
               {DEPARTMENTS.map((d) => <option key={d} value={d}>{d}</option>)}
@@ -148,25 +148,25 @@ const EditEmployeeModal = ({ employee, onClose, onSuccess }: EditEmployeeModalPr
           </div>
 
           <div>
-            <label htmlFor="edit-jobTitle" className="block text-sm font-medium text-gray-700 mb-1.5">Job Title</label>
+            <label htmlFor="edit-jobTitle" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">Job Title</label>
             <input id="edit-jobTitle" name="jobTitle" type="text" required
               value={formData.jobTitle} onChange={handleChange} className={inputClass} />
           </div>
 
           <div>
-            <label htmlFor="edit-salary" className="block text-sm font-medium text-gray-700 mb-1.5">Salary (CAD/yr)</label>
+            <label htmlFor="edit-salary" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">Salary (CAD/yr)</label>
             <input id="edit-salary" name="salary" type="number" min="0" required
               value={formData.salary} onChange={handleChange} className={inputClass} />
           </div>
 
           <div>
-            <label htmlFor="edit-startDate" className="block text-sm font-medium text-gray-700 mb-1.5">Start Date</label>
+            <label htmlFor="edit-startDate" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">Start Date</label>
             <input id="edit-startDate" name="startDate" type="date" required
               value={formData.startDate} onChange={handleChange} className={inputClass} />
           </div>
 
           <div>
-            <label htmlFor="edit-status" className="block text-sm font-medium text-gray-700 mb-1.5">Status</label>
+            <label htmlFor="edit-status" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">Status</label>
             <select id="edit-status" name="status"
               value={formData.status} onChange={handleChange} className={inputClass}>
               {STATUS_OPTIONS.map((s) => <option key={s} value={s}>{s}</option>)}
@@ -176,11 +176,11 @@ const EditEmployeeModal = ({ employee, onClose, onSuccess }: EditEmployeeModalPr
           {/* Actions */}
           <div className="sm:col-span-2 flex justify-end gap-3 pt-2">
             <button type="button" onClick={onClose}
-              className="px-5 py-2.5 text-sm border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+              className="px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
               Cancel
             </button>
             <button type="submit" disabled={isLoading}
-              className="px-6 py-2.5 bg-blue-600 text-white text-sm rounded-lg font-medium
+              className="px-6 py-2.5 bg-blue-600 text-white text-sm text-gray-900 bg-white rounded-lg font-medium
                          hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
               {isLoading ? "Saving…" : "Save Changes"}
             </button>

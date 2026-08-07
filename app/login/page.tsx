@@ -62,12 +62,12 @@ const LoginPage = () => {
             <span className="text-white font-bold">SS</span>
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Welcome back</h1>
-          <p className="text-gray-500 text-sm mt-1">Sign in to your StaffSync account</p>
+          <p className="text-gray-500 text-sm text-gray-900 bg-white mt-1">Sign in to your StaffSync account</p>
         </div>
 
         {/* Error banner */}
         {error && (
-          <div className="bg-red-50 border border-red-200 text-red-700 rounded-lg px-4 py-3 mb-6 text-sm">
+          <div className="bg-red-50 border border-red-200 text-red-700 rounded-lg px-4 py-3 mb-6 text-sm text-gray-900 bg-white">
             {error}
           </div>
         )}
@@ -75,7 +75,7 @@ const LoginPage = () => {
         {/* Login form */}
         <form onSubmit={handleSubmit} className="space-y-4" noValidate>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label htmlFor="email" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">
               Email
             </label>
             <input
@@ -85,13 +85,12 @@ const LoginPage = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
               required
-              className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm
-                         focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 bg-white text-gray-900 bg-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
             />
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label htmlFor="password" className="block text-sm text-gray-900 bg-white font-medium text-gray-700 mb-1.5">
               Password
             </label>
             <input
@@ -101,8 +100,7 @@ const LoginPage = () => {
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
               required
-              className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm
-                         focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 bg-white text-gray-900 bg-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
             />
           </div>
 
@@ -116,7 +114,7 @@ const LoginPage = () => {
           </button>
         </form>
 
-        <p className="text-center text-sm text-gray-500 mt-6">
+        <p className="text-center text-sm text-gray-900 bg-white text-gray-500 mt-6">
           Don&apos;t have an account?{" "}
           <Link href="/register" className="text-blue-600 hover:underline font-medium">
             Sign up

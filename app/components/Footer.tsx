@@ -21,7 +21,7 @@ const Footer = () => {
           © {year} StaffSync — CPRG 306 · Web Development 2 · SAIT
         </p>
         <div className="flex items-center gap-4 text-sm text-gray-400">
-          <a href="https://github.com" className="hover:text-gray-700 transition-colors">GitHub</a>
+          <a href="https://github.com/AdelTammam/staffsync" className="hover:text-gray-700 transition-colors">GitHub</a>
           <a href="mailto:admin@staffsync.com" className="hover:text-gray-700 transition-colors">Contact</a>
         </div>
       </div>
