@@ -4,7 +4,11 @@
 
 A secure, full-stack employee management portal built with Next.js 16, MongoDB, Tailwind CSS v4, and NextAuth v5.
 
----
+ADMIN LOGIN INFORMATION
+
+E-MAIL: admin@staffsync.com
+
+PASSWORD: Admin123!
 
 ## Tech Stack
 
